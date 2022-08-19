@@ -1,0 +1,34 @@
+<p>cab works!</p>
+
+<div class="container">
+    <table class="table ">
+        <thead >
+            <tr>
+                <th>CarID</th>
+                <th>CarModel</th>
+                <th>CarBrand</th>
+                <th>CarSeats</th>
+                <th>CarAvilability</th>
+                <th>CarType</th>
+                <th>CarPrice</th>
+                <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let car of cabs">
+                    <td>{{car.carId}}</td>
+                    <td>{{car.carModel}}</td>
+                    <td>{{car.carBrand}}</td>
+                    <td>{{car.carSeats}}</td>
+                    <td>{{car.carAvailability}}</td>
+                    <td>{{car.carType}}</td>
+                    <td>{{car.carPrice}}</td>
+                    <td>
+                        <a  class="btn btn-info" routerLink='Cabbook' role="button">Book Cab</a>
+                    </td>
+                </tr>
+             
+            </tbody>
+    </table>
+    
+</div>

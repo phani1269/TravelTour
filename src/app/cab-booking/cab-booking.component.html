@@ -1,0 +1,42 @@
+<p>cab-booking works!</p>
+
+<div class="col-4">
+    <form name="bookcar" #bookcar="ngForm" (ngSubmit)="addCar(bookcar)">
+        <div class="mb-3">
+            <label for="RentalID" class="form-label">RentalID</label>
+            <input type="text" class="form-control" name="RentalID" #RentalID="ngModel" [(ngModel)]="Rentcar.RentalID" aria-describedby="helpId" placeholder="rentalID">
+            <small id="helpId" class="form-text text-muted"></small>
+        </div>
+        <div class="mb-3">
+            <label for="PickDate" class="form-label">PickUP Date</label>
+            <input type="date" class="form-control" name="PickDate" #PickDate="ngModel" [(ngModel)]="Rentcar.PickDate" aria-describedby="helpId" >
+            <small id="helpId" class="form-text text-muted"></small>
+        </div>
+        <div class="mb-3">
+            <label for="ReturnDate" class="form-label">Return Date</label>
+            <input type="date" class="form-control" name="ReturnDate" #ReturnDate="ngModel" [(ngModel)]="Rentcar.ReturnDate"  aria-describedby="helpId" >
+            <small id="helpId" class="form-text text-muted"></small>
+        </div>
+        <div class="mb-3">
+            <label for="CarID" class="form-label">CarID</label>
+            <input type="text" class="form-control" name="CarID" #CarID="ngModel" [(ngModel)]="Rentcar.CarID" aria-describedby="helpId" placeholder="CarID">
+            <small id="helpId" class="form-text text-muted"></small>
+        </div>
+        <div class="mb-3">
+            <label for="CustID" class="form-label">CustomerID</label>
+            <input type="text" class="form-control" name="CustID" #CustID="ngModel" [(ngModel)]="Rentcar.CustID" aria-describedby="helpId" placeholder="CustomerID">
+            <small id="helpId" class="form-text text-muted"></small>
+        </div>
+        <div class="mb-3">
+            <label for="CityID" class="form-label">CityID</label>
+            <input type="text" class="form-control" name="CityID" #CityID="ngModel" [(ngModel)]="Rentcar.CityID" aria-describedby="helpId" placeholder="CityID">
+            <small id="helpId" class="form-text text-muted"></small>
+        </div>
+        <div class="mb-3">
+            <label for="Amount" class="form-label">Amount</label>
+            <input type="text" class="form-control" name="Amount" #Amount="ngModel" [(ngModel)]="Rentcar.Amount"  aria-describedby="helpId" placeholder="Amount">
+            <small id="helpId" class="form-text text-muted"></small>
+        </div>
+        <button type="submit" class="btn btn-danger">Submit</button>
+    </form>
+</div>
