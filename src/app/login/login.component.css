@@ -1,0 +1,103 @@
+input, select, textarea {
+	outline: none;
+	appearance: unset !important;
+	-moz-appearance: unset !important;
+	-webkit-appearance: unset !important;
+	-o-appearance: unset !important;
+	-ms-appearance: unset !important; 
+	  background-image: url('../../assets/Img/Img/background 7.jpg') 
+	} 
+
+h2 {
+line-height: 1.66;
+margin: 0;
+padding: 0;
+font-weight: bold;
+color: #222;
+font-family: Poppins;
+font-size: 36px; }
+
+body {
+font-size: 13px;
+line-height: 1.8;
+color:black;
+background-image:url('../../assets/Img/Img/background.jpg');
+font-weight: 400;
+font-family: Poppins; }
+
+.container {
+width: 900px;
+margin: 0 auto;
+background-image:url('../../assets/Img/Img/background 3.jpg');
+border-radius: 20px;
+-moz-border-radius: 20px;
+-webkit-border-radius: 20px;
+-o-border-radius: 20px;
+-ms-border-radius: 20px; }
+
+.display-flex {
+justify-content: space-between;
+-moz-justify-content: space-between;
+-webkit-justify-content: space-between;
+-o-justify-content: space-between;
+-ms-justify-content: space-between;
+align-items: center;
+-moz-align-items: center;
+-webkit-align-items: center;
+-o-align-items: center;
+-ms-align-items: center; }
+
+.display-flex-center {
+justify-content: center;
+-moz-justify-content: center;
+-webkit-justify-content: center;
+-o-justify-content: center;
+-ms-justify-content: center;
+align-items: center;
+-moz-align-items: center;
+-webkit-align-items: center;
+-o-align-items: center;
+-ms-align-items: center; }
+
+.position-center {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+-moz-transform: translate(-50%, -50%);
+-webkit-transform: translate(-50%, -50%);
+-o-transform: translate(-50%, -50%);
+-ms-transform: translate(-50%, -50%); }
+.form-group {
+	position: relative;
+	margin-bottom: 25px;
+	overflow: hidden; }
+	.form-group:last-child {
+	  margin-bottom: 0px; }
+  
+  input {
+	width: 100%;
+	display: block;
+	border: none;
+	border-bottom: 1px solid #999;
+	padding: 6px 30px;
+	font-family: Poppins;
+	box-sizing: border-box; }
+	input::-webkit-input-placeholder {
+	  color: #999; }
+	input::-moz-placeholder {
+	  color: #999; }
+	input:-ms-input-placeholder {
+	  color: #999; }
+	input:-moz-placeholder {
+	  color: #999; }
+	input:focus {
+	  border-bottom: 1px solid #222; }
+	  input:focus::-webkit-input-placeholder {
+		color: #222; }
+	  input:focus::-moz-placeholder {
+		color: #222; }
+	  input:focus:-ms-input-placeholder {
+		color: #222; }
+	  input:focus:-moz-placeholder {
+		color: #222; }

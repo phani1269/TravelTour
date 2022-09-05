@@ -1,0 +1,134 @@
+<h1 style="font-size: 30px; text-align: center;color:rgb(143, 46, 234); "><b> Total Bookings</b></h1>
+<hr>
+<div class="container">
+    <div class="row" *ngIf="!bus.length && !cab.length && !hotel.length">
+        <h1 style="font-size:30px ;color: red;"> No Bookings are done!</h1>
+    </div>
+    <div class="row" *ngIf="bus.length">
+        <h1 >Bookings of Bus : {{bus.length}}</h1>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">travelDate</th>
+              <th scope="col">name</th>
+              <th scope="col">age</th>
+              <th scope="col">gender</th>
+              <th scope="col">mobileNo</th>
+              <th scope="col">bookingAmount</th>
+              <th scope="col">seatNumber</th>
+              <th scope="col">seatType</th>
+              <th scope="col">boardingPoint</th>
+              <th scope="col">dropingPoint</th>
+              <th scope="col">busName</th>
+              <th scope="col">busType</th>
+              <th scope="col">price</th>
+              <th scope="col">busNumber</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let country of bus; index as i">
+              <th scope="row">{{ i + 1 }}</th>
+              <!-- <td>
+                <img [src]="'https://upload.wikimedia.org/wikipedia/commons/' + country.flag" class="me-2" style="width: 20px">
+                {{ country.name }}
+              </td> -->
+              <td>{{ country.travelDate  }}</td>
+              <td>{{ country.name  }}</td>
+              <td>{{ country.age  }}</td>
+              <td>{{ country.gender  }}</td>
+              <td>{{ country.mobileNo  }}</td>
+              <td>{{ country.bookingAmount  }}</td>
+              <td>{{ country.seatNumber  }}</td>
+              <td>{{ country.seatType  }}</td>
+              <td>{{ country.boardingPoint  }}</td>
+              <td>{{ country.dropingPoint  }}</td>
+              <td>{{ country.busName  }}</td>
+              <td>{{ country.busType  }}</td>
+              <td>{{ country.price  }}</td>
+              <td>{{ country.busNumber  }}</td>
+            </tr>
+            </tbody>
+          </table>
+    </div>
+    <hr>
+    <div class="row" *ngIf="hotel.length">
+        <h1>Reservations of Hotels : {{hotel.length}}</h1>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">reservationDate</th>
+              <th scope="col">dateIn</th>
+              <th scope="col">dateOut</th>
+              <th scope="col">cityName</th>
+              <th scope="col">hotelName</th>
+              <th scope="col">address</th>
+              <th scope="col">pincode</th>
+              <th scope="col">phoneNo</th>
+              <th scope="col">roomType</th>
+              <th scope="col">price</th>
+              
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let country of hotel; index as i">
+              <th scope="row">{{ i + 1 }}</th>
+              <!-- <td>
+                <img [src]="'https://upload.wikimedia.org/wikipedia/commons/' + country.flag" class="me-2" style="width: 20px">
+                {{ country.name }}
+              </td> -->
+              <td>{{ country.reservationDate  }}</td>
+              <td>{{ country.dateIn  }}</td>
+              <td>{{ country.dateOut  }}</td>
+              <td>{{ country.cityName  }}</td>
+              <td>{{ country.hotelName  }}</td>
+              <td>{{ country.address  }}</td>
+              <td>{{ country.pincode  }}</td>
+              <td>{{ country.phoneNo  }}</td>
+              <td>{{ country.roomType  }}</td>
+              <td>{{ country.price  }}</td>
+              
+            </tr>
+            </tbody>
+          </table>
+    </div>
+    <hr>
+    <div class="row" *ngIf="cab.length">
+        <h1>Rentals of Cab :: {{cab.length}}</h1>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">pickDate</th>
+              <th scope="col">returnDate</th>
+              <th scope="col">carModel</th>
+              <th scope="col">carBrand</th>
+              <th scope="col">amount</th>
+              <th scope="col">cityName</th>
+              <th scope="col">carType</th>
+              <th scope="col">carPrice</th>
+              
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let country of cab; index as i">
+              <th scope="row">{{ i + 1 }}</th>
+              <!-- <td>
+                <img [src]="'https://upload.wikimedia.org/wikipedia/commons/' + country.flag" class="me-2" style="width: 20px">
+                {{ country.name }}
+              </td> -->
+              <td>{{ country.pickDate  }}</td>
+              <td>{{ country.returnDate  }}</td>
+              <td>{{ country.carModel  }}</td>
+              <td>{{ country.carBrand  }}</td>
+              <td>{{ country.amount  }}</td>
+              <td>{{ country.cityName  }}</td>
+              <td>{{ country.carType  }}</td>
+              <td>{{ country.carPrice  }}</td>
+             
+            </tr>
+            </tbody>
+          </table>
+    </div>
+</div>

@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -8,13 +8,17 @@ import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { HotelComponent } from './hotel/hotel.component';
-import { CabComponent } from './cab/cab.component';
-import { BusComponent } from './bus/bus.component';
 import { DataService } from './Services/data.service';
 import { HttpClientModule } from '@angular/common/http';
-import { CabBookingComponent } from './cab-booking/cab-booking.component';
 import { CommonModule } from '@angular/common';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LoginComponent } from './login/login.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
+import { AngularMaterialModule } from './angular-material/angular-material.module';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { UserDetailsComponent } from './user-details/user-details.component';
+import { UserBookingsComponent } from './user-bookings/user-bookings.component';
+
 
 @NgModule({
   declarations: [
@@ -22,10 +26,10 @@ import { CommonModule } from '@angular/common';
     HomeComponent,
     HeaderComponent,
     FooterComponent,
-    HotelComponent,
-    CabComponent,
-    BusComponent,
-    CabBookingComponent
+    LoginComponent,
+    SignUpComponent,
+    UserDetailsComponent,
+    UserBookingsComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,10 +38,15 @@ import { CommonModule } from '@angular/common';
     ReactiveFormsModule,
     CommonModule,
     FormsModule,
-   HttpClientModule
+   HttpClientModule,
+   BrowserAnimationsModule,
+   AngularMaterialModule,
+   FontAwesomeModule,
+
   
   ],
   providers: [DataService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }

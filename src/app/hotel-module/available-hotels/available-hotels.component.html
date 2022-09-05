@@ -1,0 +1,54 @@
+<!-- 
+      <div class="container">
+      <figure class="card mt-4" *ngFor="let hotel of hotels">
+        <div class="row">
+          <div class="col-md-5">
+          <img class="img-fluid" src="../../../assets/Img/{{hotel.hotelImage}}">
+        </div>
+        <br>
+        <div class="col-md-5 image">
+          <h2 class="card-title mt-3"><strong><h1>{{hotel.hotelName}}</h1></strong></h2>
+          <b>RoomType:</b> {{hotel.roomType}}<br>
+          <b>Address:</b>{{hotel.address}},{{hotel.pincode}}
+          
+          <b>PhoneNo:</b>{{hotel.phoneNo}} <br>
+          
+          <b>Per Day Price:</b>{{hotel.price}}
+          
+        </div>
+        <div class="col-md-2 image1 ">
+          <h3 class="card-title mt-3">{{hotel.no_Of_Rooms}} Rooms available</h3>
+            <p>PayableAmount</p>
+          <p>{{hotel.price*TotalDays}}</p>
+          <button class=" btn btn-primary" [routerLink]="['reservation',hotel['hotelId']]" >Proceed To Book</button>
+        </div>
+        </div>
+      </figure>
+      </div>
+  
+    -->
+    <div class="container-fluid">
+      <figure class="card mt-4" *ngFor="let hotel of hotels">
+        <div class="row">
+          <div class="col-md-5">
+          <img class="img-fluid" src="../../../assets/Img/Img/{{hotel.hotelImage}}">
+        </div>
+        <br>
+        <div class="col-md-5 image">
+          <h2 class="card-title mt-3 "><strong><h1>{{hotel.hotelName}}</h1></strong></h2>
+          <b>RoomType:&nbsp;&nbsp;</b> {{hotel.roomType}}<br><br>
+          
+          <b>PhoneNo:&nbsp;&nbsp;</b>{{hotel.phoneNo}} <br><br>
+          
+          <b>Per Day Price:&nbsp;&nbsp;</b>{{hotel.price}}<br><br>
+          
+        </div>
+        <div class="col-md-2 image1 ">
+          <h3 class="card-title mt-3">{{hotel.no_Of_Rooms}} Rooms available</h3>
+            <p>PayableAmount</p>
+          <p>{{hotel.price*TotalDays}}</p>
+          <button class=" btn btn-primary" [routerLink]="['reservation',hotel['hotelId']]" >Proceed To Book</button>
+        </div>
+        </div>
+      </figure>
+      </div>

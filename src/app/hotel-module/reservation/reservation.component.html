@@ -1,0 +1,54 @@
+<!-- 
+<div class="container" >
+    <div class="row">
+        <div class="col">
+    <div class="col col-lg-6 col-md-8 col-sm-12">
+        <div class="card bg-light mb-6">
+            <div class="card-header">Booking Details</div>
+            <div class="card-body">
+                <p class="card-text" *ngFor="let customer of customer"> <b>Customer Name :</b>
+                    {{customer.name}} </p>
+                <p class="card-text"> <b> CheckIn Date :</b> {{DateIn}} </p>
+                <p class="card-text"> <b> CheckOut Date :</b> {{DateOut}} </p>
+                <p class="card-text"><b> HotelName:</b> {{hotel.hotelName}}</p>
+                <p class="card-text"><b> Room Type:</b>{{hotel.roomType}}</p>
+                <p class="card-text"><b> Price per Day:</b>{{hotel.price}}</p>
+                <p class="card-text"><b> PayableAmount for {{TotalDays}} Days:</b> {{hotel.price*TotalDays}} INR</p>
+            </div>
+            <button class=" btn btn-primary" [disabled]="isdisabled" (click)="submit()"  >Proceed To Book</button>
+        </div>
+    </div>
+    </div>
+
+</div>
+
+    
+</div> -->
+<body>
+    <div class="container-fluid" >
+        <div class="row">
+            <div class="col">
+        <div class="col col-lg-6 col-md-8 col-sm-12">
+            <div class="card bg-light mb-6 ">
+                
+                <div class="card-header"><h1>Booking Details</h1></div>
+                <div class="card-body">
+                    <p class="card-text" *ngFor="let customer of customer"> <b>Customer Name :</b>
+                        {{customer.name}} </p>
+                    <p class="card-text"> <b> CheckIn Date :</b> {{DateIn}} </p>
+                    <p class="card-text"> <b> CheckOut Date :</b> {{DateOut}} </p>
+                    <p class="card-text"><b> HotelName:</b> {{hotel.hotelName}}</p>
+                    <p class="card-text"><b> Room Type:</b>{{hotel.roomType}}</p>
+                    <p class="card-text"><b> Price per Day:</b>{{hotel.price}}</p>
+                    <p class="card-text"><b> PayableAmount for {{TotalDays}} Days:</b> {{hotel.price*TotalDays}} INR</p>
+                </div>
+                <button class=" btn btn-success lif "[disabled]="isdisabled" (click)="submit()"  >Proceed To Book</button>
+            </div>
+        </div>
+        </div>
+    
+    </div>
+    
+        
+    </div>
+    </body>

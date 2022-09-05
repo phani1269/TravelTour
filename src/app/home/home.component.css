@@ -1,0 +1,35 @@
+/* image background textbox */
+
+/* home_im & text-block holding the image and the text */
+.home_im {
+    position: relative;
+    font-size: 12px;
+    font-style: italic;
+  }
+  
+  /* Bottom right text */
+  .text-block {
+    position: absolute;
+    top: 90px;
+    right: 50px;
+    background: rgba(187, 153, 159, 0.247)
+  }
+  
+  
+  
+  * {
+      box-sizing: border-box;
+    }
+    
+    .column {
+      float: left;
+      width: 33.33%;
+      padding: 5px;
+    }
+    
+    /* Clearfix (clear floats) */
+    .row::after {
+      content: "";
+      clear: both;
+      display: table;
+    }

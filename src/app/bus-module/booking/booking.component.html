@@ -1,0 +1,76 @@
+<div id="booking" class="section">
+    <div class="section-center">
+      <div class="container">
+        <div class="row">
+          <div class="booking-form">
+            <h2 style="color: #fff ;"><i> Passenger Info</i></h2>
+            <br>
+            <form [formGroup]="BookingForm" (ngSubmit)="FinalBooking(BookingForm)">
+              <div>
+                <div class="row">
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <span class="form-label">Name</span>
+                      <input class="form-control" formControlName="PassengerName" required type="text" placeholder="Name"
+                        aria-describedby="custAmount">
+                      <small id="PassengerName" *ngIf="f['PassengerName'].invalid && submitted"
+                        class="text-muted">*PassengerName is
+                        required</small>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <span class="form-label">Mobile Numeber</span>
+                      <input class="form-control" formControlName="MobileNumber" required
+                        (keypress)="keyPressNumbers($event)" type="text" aria-describedby="MobileNumber"
+                        placeholder="Enter Mobile Number">
+                      <small id="MobileNumber" *ngIf="f['MobileNumber'].invalid && submitted"
+                        class="text-muted">*MobileNumber is
+                        required</small>
+  
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <span class="form-label">Age</span>
+                      <input class="form-control" formControlName="Age" required (keypress)="keyPressNumbers($event)"
+                        type="text" aria-describedby="Age" required placeholder="Enter Age">
+                      <small id="Age" *ngIf="f['Age'].invalid && submitted" class="text-muted">*Age is
+                        required</small>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <div class="form-checkbox">
+                        <label for="Male">
+                          <input type="radio" required id="Male" formControlName="Gender" value="Male">
+                          <span></span>Male
+                        </label>
+                        <label for="Female">
+                          <input type="radio" required id="Female" formControlName="Gender" value="Female">
+                          <span></span>Female
+                        </label>
+                        <label for="Other">
+                          <input type="radio" required id="Other" formControlName="Gender" value="Other">
+                          <span></span>Other
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="row">
+  
+                <div class="col-md-4">
+                  <div class="form-btn">
+                    <button class="submit-btn" style="margin-left: 350px;"> Proceed to Book </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

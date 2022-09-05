@@ -1,0 +1,26 @@
+/* .nav-link:hover {
+    transition: 0.3s;
+  }
+   */
+   .nav-link:hover {
+    transition: 0.3s;
+  }
+  #navbarNav ul li a 
+  {
+    color:white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  .container-fluid
+  {
+    background-image: url('../../assets/Img/Img/beach.jpeg')
+  }
+  .container-fluid a
+  {
+    color:black;
+  }
+  h2{
+    color:white;
+  }
+  p{
+    color:orange;
+  }

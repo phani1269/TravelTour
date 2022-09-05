@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { faLock, faUser } from '@fortawesome/free-solid-svg-icons';
+import * as alertyfy from 'alertifyjs';
+
 
 @Component({
   selector: 'app-header',
@@ -7,9 +11,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+//  faLock = faLock;
+  faLock = faUser;
+
+  constructor(private Route:Router) { }
 
   ngOnInit(): void {
   }
-
+  LoggedIn(){
+    return localStorage.getItem("token");
+  }
+  LoggedOut(){
+    //localStorage.removeItem('token');
+    
+    localStorage.clear();
+    this.Route.navigate(['../']);
+  }
 }

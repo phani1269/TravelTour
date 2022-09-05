@@ -1,0 +1,49 @@
+<div id="booking" class="section">
+    <div class="section-center">
+        <div class="container">
+            <div class="row">
+                <div class="booking-form">
+                    <div class="form-header">
+                        <h1>Make your reservation</h1>
+                    </div>
+                    
+
+                        
+                        <div class="mb-3">
+                            <label for="city" class="form-label" style="color:black; font-size: xx-large;">SELECT CITY</label>
+                            <select name="selectCity" (change)="changeCity($event)" class="form-control">
+                                <option value=null>---Select---</option>
+                                <option *ngFor="let org of citys" [value]="org.cityId">{{org.cityName}}</option>
+                            </select>
+                        </div>
+                       
+
+
+                       
+
+
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="date" class="form-control" #input min="{{min}}" required (change)="Onchange(input.value)">
+                                    <span class="form-label">Check In</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="date" class="form-control" #input1 min="{{Date}}" required (change)="Onchange1(input1.value)">
+                                    <span class="form-label">Check out</span>
+                                </div>
+                            </div>
+                        </div>
+                       
+                        <div class="form-btn">
+                            <button class="submit-btn" [routerLink]="['availableHotels']" >Search hotels</button>
+                        </div>
+                        
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+                        </div>

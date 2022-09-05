@@ -1,0 +1,40 @@
+.example-card {
+    min-width: 400px;
+  }
+  
+  /* .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  } */
+  .content {
+    padding: 16px;
+    background-color: gainsboro;
+}
+
+
+
+.content > mat-card {
+  width: 200px;
+}
+
+.form-label{
+color:black;
+font-size: large;
+font-weight:bolder;
+
+ ;
+}
+
+.form-control{
+color:black;
+border-color:black;
+background-color:white;
+}
+
+.mat-card-image{
+/* width: 200px; */
+height: 200px;
+}
+.colr{
+background-color:rgb(190, 229, 234);
+}

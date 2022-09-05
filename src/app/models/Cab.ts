@@ -6,10 +6,11 @@ export interface Icab{
     carAvailability:boolean;
     carType:string;
     carPrice:number;
+    carImage:string;
 }
 export interface Icity{
-    CityID:number;
-    CityName:string;
+    cityId:number;
+    cityName:string;
 }
 export interface Irental{
     RentalID:number;
@@ -19,4 +20,13 @@ export interface Irental{
     CustID:number;
     CityID:number;
     Amount:number;
+}
+export interface ICabRental{
+    rentalId: number;
+  pickDate: string;
+  returnDate: string;
+  carId: number;
+  custId: number;
+  cityId: number;
+  amount: number
 }

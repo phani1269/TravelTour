@@ -1,0 +1,58 @@
+<div class="colr">
+<div class="container">
+    <br><br>
+    <div class="row">
+        <div class="col-md-3">
+            <span class="form-label">Select Cities</span>
+            <select name="BusBookingOrigin" (change)="changeCity($event)" class="form-control">
+                <option value=null>---Select---</option>
+                <option *ngFor="let org of citys" [value]="org.cityName">{{org.cityName}}</option>
+            </select>
+        </div>
+    
+        <div class="col-md-3">
+            <span class="form-label">PickUp Date</span>
+            <input type="date" class="form-control" #input min="{{min}}" (change)="Onchange(input.value)">
+        </div>
+        <div class="col-md-3">
+            <span class="form-label">Return Date</span>
+            <input type="date" class="form-control" #input1 min="{{Date}}" (change)="Onchange1(input1.value)">
+        </div>
+        <!-- <div class="col-md-3">
+            <button style="margin-top: 20px;" (click)="clickData()" class="btn btn-info">Search Cabs</button>
+        </div> -->
+    
+    </div>
+    <br>
+
+
+  <div class="content" *ngIf="cabs.length" >
+    <div fxLayout="row wrap" fxLayoutGap="16px grid">
+      <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let num of cabs">
+        <mat-card class="mat-elevation-z4" >
+          <mat-card-header>
+            <mat-card-title> {{num.carModel}}</mat-card-title>
+          </mat-card-header>
+          <img mat-card-image src="../../../assets/Img/Img/{{num.carImage}}" >
+          <mat-card-content>
+            <p>
+              CarBrand: {{num.carBrand}}
+            </p>
+            <p>
+               CarType: {{num.carType}}
+              </p>
+              <p>
+                Per Day Price: {{num.carPrice}}
+              </p>
+              <p>
+                Total Price: {{num.carPrice*Dayslength}}
+              </p>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-raised-button color="primary" [routerLink]="['CabBooking',num['carId']]">Book Car</button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+    </div>
+  </div>

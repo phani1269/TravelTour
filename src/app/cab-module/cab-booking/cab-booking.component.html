@@ -1,0 +1,39 @@
+
+<div id="booking" class="section">
+    <div class="section-center">
+        <div class="container">
+
+            <div class="row">
+                <div class="col">
+                <div class="parentcontainer" >
+                    <div class="col col-lg-6 col-md-8 col-sm-12">
+                        <div class="card bg-light mb-6">
+                            <div class="card-header">Booking Details</div>
+                            <div class="card-body">
+                                <p class="card-text" *ngFor="let customer of customer"> <b>Customer Name :</b>
+                                    {{customer.name}} </p>
+
+                                <p class="card-text"> <b> PickUp Date :</b> {{PickUpDate}} </p>
+                                <p class="card-text"> <b> Return Date :</b> {{ReturnDate}} </p>
+                                <p class="card-text"><b> CarModel:</b> {{newCars.carModel}}</p>
+                                <p class="card-text"><b> CarBrand:</b>{{newCars.carBrand}}</p>
+                                <p class="card-text"><b> PayableAmount for {{Dayslength}} Days:</b> {{amount}} INR</p>
+                            </div>
+                            <button class=" btn btn-primary" [disabled]="isdisabled" (click)="SubmitData()">Proceed To Book</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+            </div>
+            
+
+        </div>
+    </div>
+</div>
+
+      
+ 
+    
+      
+

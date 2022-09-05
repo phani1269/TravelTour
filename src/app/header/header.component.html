@@ -1,4 +1,60 @@
-    <nav class="navbar navbar-expand-lg bg-light "   >
+<!-- 
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+          <a class="navbar-brand text-uppercase" href="#">Star Tourism</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item px-3">
+                <a class="nav-link text-uppercase" routerLink="/home" routerLinkActive="active">Home</a>
+              </li>
+              <li class="nav-item px-3">
+                <a class="nav-link text-uppercase" routerLink="" routerLinkActive="active">Blog</a>
+              </li>
+              <li class="nav-item px-3">
+                <a class="nav-link text-uppercase" routerLink="/contact" routerLinkActive="active">Contact Us</a>
+              </li>
+            </ul>
+            <ul class="d-md-inline-block d-lg-inline-block ml-auto">
+              <li class="nav-link">
+                <p>Contact: +91 9381118256</p>
+              </li>
+            </ul>
+            
+          </div>
+        </div>
+      </nav>
+      <mat-toolbar color="primary" class="app-header">
+        <span class="nav-tool-items">
+          <a mat-button mat-raised-button *ngIf="!LoggedIn()" routerLink="login" >Login</a>
+          <a mat-button mat-raised-button *ngIf="!LoggedIn()" routerLink="register" >Register</a>
+          <a mat-button mat-raised-button  ></a>
+        </span>
+        <div ngbDropdown class="nav-item" *ngIf="LoggedIn()">
+          <a href (click)="false" class="nav-link" ngbDropdownToggle>Welcome
+            <fa-icon [icon]="faLock" class="fa-1x"></fa-icon>
+          </a>
+          <div ngbDropdownMenu>
+            <button ngbDropdownItem routerLink="userdetails">User Details</button>
+            <button ngbDropdownItem routerLink="userbookings"> Bookings</button>
+            <div class="dropdown-divider"></div>
+            <button ngbDropdownItem  (click)="LoggedOut()"> Logout</button>
+          </div>
+        </div>
+      </mat-toolbar>
+
+
+      
+      
+
+
+      
+       -->
+       <!-- <nav class="navbar navbar-expand-lg bg-light "   >
         <div class="container-fluid">
           <a class="navbar-brand fs-3" href="#">TRAVEL</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,5 +90,89 @@
             </form>
           </div>
         </div>
+      </nav> -->
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand text-uppercase" href="#"><h2>Star Tourism</h2></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto ">
+              <li class="nav-item px-3">
+                <a class="nav-link text-uppercase" routerLink=" " routerLinkActive="active">Home<mat-icon>home</mat-icon></a>
+              </li>
+              <li class="nav-item px-3">
+                <a class="nav-link text-uppercase" routerLink="" routerLinkActive="active">Blog<mat-icon>book</mat-icon></a>
+              </li>
+              <li class="nav-item px-3">
+                <a class="nav-link text-uppercase" routerLink="/contact" routerLinkActive="active">Contact Us<mat-icon>contact_support</mat-icon></a>
+              </li>
+            </ul>
+            <a  class="btn btn-info" routerLink='hotel' role="button">Book Hotel</a>&nbsp;&nbsp;&nbsp;
+<a  class="btn btn-info" routerLink="cab" role="button">Book Cab</a>&nbsp;&nbsp;&nbsp;
+<a  class="btn btn-info" routerLink="bus" role="button">Book Bus</a>&nbsp;&nbsp;
+<span class="nav-tool-items">
+  <a mat-button mat-raised-button *ngIf="!LoggedIn()" routerLink="login" >Login</a>&nbsp;
+  <a mat-button mat-raised-button *ngIf="!LoggedIn()" routerLink="register" >Register</a>
+  <div ngbDropdown class="nav-item" *ngIf="LoggedIn()">
+    <a href (click)="false" style="color: white;" class="nav-link" ngbDropdownToggle>Welcome
+      <fa-icon [icon]="faLock" class="fa-1x"></fa-icon>
+    </a>
+    <div ngbDropdownMenu>
+      <button ngbDropdownItem routerLink="userbookings"> Bookings</button>
+      <div class="dropdown-divider"></div>
+      <button ngbDropdownItem  (click)="LoggedOut()"> Logout</button>
+    </div>
+  </div>
+</span>
+
+
+
+<!-- <span class="nav-tool-items">
+  <a mat-button mat-raised-button *ngIf="!LoggedIn()" routerLink="login" >Login</a>&nbsp;&nbsp;
+  <a mat-button mat-raised-button *ngIf="!LoggedIn()" routerLink="register" >Register</a>
+  <a mat-button mat-raised-button  ></a> 
+</span> -->
+            <!-- <ul class="d-md-inline-block d-lg-inline-block ml-auto">
+            <li class="nav-item px-3">
+              <a class="nav-link text-uppercase" routerLink="/login" routerLinkActive="active">Login</a>
+            </li>
+            <li class="nav-item px-3">
+              <a class="nav-link text-uppercase" routerLink="/register" routerLinkActive="active">Register</a>
+            </li>
+            <li class="nav-item px-3">
+              <a class="nav-link text-uppercase" routerLink="/contact" routerLinkActive="active">Contact Us</a>
+            </li>
+          </ul> -->
+          </div>
+        </div>
       </nav>
+      <!-- <mat-toolbar color="primary" class="app-header">
+         <span class="nav-tool-items">
+          <a mat-button mat-raised-button *ngIf="!LoggedIn()" routerLink="login" >Login</a>
+          <a mat-button mat-raised-button *ngIf="!LoggedIn()" routerLink="register" >Register</a>
+          <a mat-button mat-raised-button  ></a>
+        </span> 
+        <div ngbDropdown class="nav-item" *ngIf="LoggedIn()">
+          <a href (click)="false" class="nav-link" ngbDropdownToggle>Welcome
+             <fa-icon [icon]="faLock" class="fa-1x"></fa-icon>
+          </a>
+          <div ngbDropdownMenu>
+            <button ngbDropdownItem routerLink="userdetails">User Details</button>
+            <button ngbDropdownItem routerLink="userbookings"> Bookings</button>
+            <div class="dropdown-divider"></div>
+            <button ngbDropdownItem  (click)="LoggedOut()"> Logout</button>
+          </div>
+        </div>
+      </mat-toolbar>
+
+
       
+      
+
+
+      
+       -->

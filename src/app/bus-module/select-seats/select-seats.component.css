@@ -1,0 +1,68 @@
+.section {
+    position: relative;
+    height: 100vh;
+  }
+  
+  .section .section-center {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  
+  #booking {
+    font-family: 'PT Sans', sans-serif;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcZ9s2xzVsQLBR_rHaksuY3ADGaWqVECBDyA&usqp=CAU');
+    background-size: cover;
+    background-position: center;
+  }
+.row1{
+    max-width:1200px;
+    margin:0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.row1 div{
+    margin: 10px;
+}
+.row1 div label{
+    cursor: pointer;
+}
+.row1 div label input[type="checkbox"]{
+    display: none;
+}
+.row1 div label span{
+    position: relative;
+    display: inline-block;
+    background: #ced4da;
+    padding: 10px;
+    color: rgb(19, 1, 1);
+    text-shadow: 0 1px 4px rgba(13, 13, 13, 0.5);
+    border-radius: 30px;
+    font-size: 20px;
+    transition: 0.5s;
+    user-select: none;
+    overflow: hidden;
+}
+.row1 div label span :before{
+    content: '';
+    position: absolute;
+    
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: rgba(255, 255, 255, 0.4);
+}
+.row1 div label input[type="checkbox"]:checked ~ span{
+    background: rgb(94, 214, 108);
+     
+}
+.row1 div label input[type="checkbox"]:disabled ~ span{
+    outline:1px solid rgb(17, 15, 15);  
+    color: rgb(243, 234, 234);
+    background-color: #db1d1d;
+    cursor: no-drop;
+  }

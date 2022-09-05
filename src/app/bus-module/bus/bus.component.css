@@ -1,0 +1,26 @@
+.form-label{
+    color:black;
+    font-size: large;
+    font-weight:bolder;
+    
+     ;
+  }
+
+  .table{
+    /* background-color: gainsboro; */
+   font-size: large; 
+  }
+
+  
+.colr{
+    background-color:rgb(190, 229, 234);
+  }
+.msg{
+    text-align: center;
+    color: red;
+    font-weight: bolder;
+    font-size: 20px;
+}
+.fa fa-sort{
+    font-weight: bolder;
+}

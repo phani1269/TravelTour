@@ -1,0 +1,54 @@
+<div class="main">
+ <!-- Sign up form -->
+  <section class="signup">
+    <div class="container">
+        <div class="signup-content">
+            <div class="signup-form">
+                <h2 class="form-title">Sign up</h2>
+                <form [formGroup]="registerForm" (ngSubmit)="FinalRegister(registerForm)" class="register-form" id="register-form">
+                    <div class="form-group">
+                        <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                        <input type="text" formControlName="name" id="name"  placeholder="Your Name"/>
+                        <small class="form-text text-danger" *ngIf="f['name'].errors?.['required'] && (f['name'].dirty || f['name'].touched) ">*Name required</small>
+                   <div class="form-text text-danger" *ngIf="f['name'].errors?.['minlength']">name is too short. Atleast 4 charachters</div>
+                    </div>
+                    <div class="form-text text-danger" *ngIf="f['name'].errors?.['pattern']">name should start with an Alphabet</div>
+               
+                    <div class="form-group">
+                        <label for="email"><i class="zmdi zmdi-email"></i></label>
+                        <input type="email" formControlName="email" id="email" placeholder="Your Email"/>
+                        <small class="form-text text-danger" *ngIf="f['email'].errors?.['required'] && (f['email'].dirty || f['email'].touched)">*Email required</small>
+                        <small class="form-text text-danger" *ngIf="f['email'].errors?.['email'] && (f['email'].dirty || f['email'].touched)">*Email is invalid</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone"><i class="zmdi zmdi-lock"></i></label>
+                        <input type="text" formControlName="phone" id="phone" placeholder="your phone number"/>
+                        <small class="form-text text-danger" *ngIf="f['phone'].errors?.['required'] && (f['phone'].dirty || f['phone'].touched)">*phone number required</small>
+                        <small class="form-text text-danger" *ngIf="f['phone'].errors?.['pattern'] && (f['phone'].dirty || f['phone'].touched)">*phone number in invalid</small>
+                        <small class="form-text text-danger" *ngIf="f['phone'].errors?.['minlength'] && (f['phone'].dirty || f['phone'].touched)">*required 10 digits</small>
+                        <small class="form-text text-danger" *ngIf="f['phone'].errors?.['maxlength'] && (f['phone'].dirty || f['phone'].touched)">*number should contain only 10 digits</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="pass"><i class="zmdi zmdi-lock"></i></label>
+                        <input type="password" formControlName="password" id="pass" placeholder="Password"/>
+                        <small class="form-text text-danger" *ngIf="f['password'].errors?.['required'] && (f['password'].dirty || f['password'].touched)">*password required</small>
+                        <small class="form-text text-danger" *ngIf="f['password'].errors?.['minlength'] ||f['password'].errors?.['maxlength'] && (f['password'].dirty || f['password'].touched)">*password should be atleast 6 and at the max 12 characters long</small>
+                    </div>
+                   
+                    <!-- <div class="form-group">
+                        <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
+                        <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
+                    </div> -->
+                    <div class="form-group form-button">
+                        <input type="submit" name="signup" id="signup" class="form-submit" value="Register"/>
+                    </div>
+                </form>
+            </div>
+            <div class="signup-image">
+                <figure><img src="../../assets/Img/Img/signup-image.jpg" alt="sing up image"></figure>
+                <a routerLink="/login" class="signup-image-link">I am already member</a>
+            </div>
+        </div>
+    </div>
+</section>
+</div>

@@ -1,0 +1,80 @@
+<button class="btn btn-link" (click)="navigate()" >Back To Home</button>
+<div class="html">
+    <div class="ticket-wrapper">
+    
+        <div class="ticket-large">
+            <div class="ticket-header">
+                <div class="logo">
+                    <i class="fas fa-bacon"></i>
+                    <p>NEXTBUS Travels</p>
+                </div>
+            </div>
+    
+            <div class="ticket-details">
+                <div class="destination">
+                    <p class="flight">{{BoardingPts.routePoint}} to {{DropingPts.routePoint}}</p>
+                    <div class="flight-number">
+                        <p> {{Date}}</p>
+                        <p class="subscript-text"> Journey Date</p>
+                    </div>
+                </div>
+                <div class="passenger-details">
+                    <div class="passenger">
+                        <p>{{BookingData.PassengerName}}</p>
+                        <p class="subscript-text">Passenger Name</p>
+                    </div>
+                    <div class="boarding">
+                        <p>{{bus.busName}}</p>
+                        <p class="subscript-text">Bus Name</p>
+                    </div>
+                    <div class="class">
+                        <p *ngFor="let seat of seat">{{seat.name}},{{seat.Type}}</p>
+                        <p class="subscript-text">Seat Details</p>
+                    </div>
+                   
+                </div>
+                <div class="gate-details">
+                    <div class="group">
+                        <p>{{bus.busNumber}}</p>
+                        <p class="subscript-text">Bus Number</p>
+                    </div>
+                    <div class="seating">
+                        <p>{{BoardingPts.arivalTime}}</p>
+                        <p class="subscript-text">Boarding Time</p>
+                    </div>
+                    <div class="gate">
+                        <p>{{TotalAmount}} INR</p>
+                        <p class="subscript-text">Total Amount</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="ticket-cut-off">
+            <div class="ticket-header-small">
+                <p>Ticket Number:{{Booking.bookingId}}</p>
+            </div>
+            <div class="cut-off-details">
+                <div class="barcode">
+                    <span class="first"></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="destination">
+                    <p>{{BoardingPts.routePoint}}</p>
+                    <p class="subscript-text">to</p>
+                    <p>{{DropingPts.routePoint}}</p>
+                </div>
+                <p>{{BookingData.PassengerName}}</p>
+                <p>{{bus.busNumber}}</p>
+                <p>{{bus.busType}}</p>
+                <p *ngFor="let seat of seat">{{seat.name}} </p>
+                <p>Boards at {{BoardingPts.arivalTime}}</p>
+            </div>
+        </div>
+    
+        <div class="second-ticket">
+        </div>
+    </div>
+    
+    </div>

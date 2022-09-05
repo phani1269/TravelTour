@@ -1,0 +1,85 @@
+<div class="colr">
+<br>
+<div id="booking" class="section">
+    <div class="section-center">
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+                <span class="form-label">Origins</span>
+            <select ngModel name="BusBookingOrigin"  (change)="changeorigin($event)" class="form-control">
+                <option value=null>---Select---</option>
+                <option *ngFor="let org of Origins" [value]="org.origin">{{org.origin}}</option>
+            </select>
+        </div>
+        <div class="col-md-3">
+            <span class="form-label">Destinations</span>
+            <select ngModel name="BusBookingDestination" (change)="changedestination($event)"
+                        class="form-control">
+                        <option value=null>---Select---</option>
+                        <option *ngFor="let des of Destinations" [value]="des.destination">{{des.destination}}</option>
+                    </select>
+        </div>
+        <div class="col-md-3">
+            <span class="form-label">Journey Date</span>
+            <input type="date" class="form-control" #input min="{{min}}" (change)="Onchange(input.value)">
+        </div>
+        <div class="col-md-3">
+            <button type="button" (click)="change()"
+             style="margin-top: 20px ;" class="btn btn-primary">SearchBuses</button>
+        </div>
+        <div class="col-md-3" >
+            <button type="button"  (click)="Filterac()" *ngIf="buses.length"
+             style="margin-top: 43px ;" class="btn btn-info">filterBy AC</button>
+        </div>
+        <div class="col-md-3">
+            <button type="button" (click)=" FilterNonAc()" *ngIf="buses.length"
+             style="margin-top: 43px ;" class="btn btn-info">filterBy NON-AC</button>
+        </div>
+
+    </div>
+
+    <br><br>
+<div class="row" >
+    <div class="col" *ngIf="buses.length; else busesUnavailable" >
+        <table class="table  table-striped" >
+            <thead>
+                <tr>
+                    <!-- <th class="fa fa-sort"><a [routerLink]="[]" >BusID</a></th> -->
+                    <th><a  >BusNumber</a></th>
+                    <th><a  >BusName</a></th>
+                    <th><a  >BusType</a></th>
+                    <!-- <th><a  >TotalSeats</a></th> -->
+                    <th ><a  > Price startsFrom</a></th>
+                    <th><a  >EstimatedTime</a></th>
+                    <th><a  >Action</a></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let bus of buses" >
+                    <!-- <td>{{bus.busID}}</td> -->
+                    <td>{{bus.busNumber}}</td>
+                    <td>{{bus.busName}}</td>
+                    <td>{{bus.busType}}</td>
+                    <!-- <td>{{bus.totalSeats}}</td> -->
+                    <td>{{bus.startsFrom}}</td>
+                    <td>{{bus.estimatedTime}}</td>
+                    <td>
+                        <button type="button" [routerLink]="['seats',bus['busID']]" class="btn btn-light viewseats">View Seats</button>
+                    </td>
+                </tr>
+              
+            </tbody>
+        </table>
+    </div>
+    <ng-template #busesUnavailable  >
+        <span class ="msg">
+           * Sorry! No buses are currently available running on this route.
+        </span>
+        <br><br><br>
+    </ng-template>
+    
+</div>   
+</div>
+</div>
+</div>
+</div>
